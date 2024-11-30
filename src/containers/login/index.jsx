@@ -1,15 +1,17 @@
-import { Button, Container, Form, InputContainer, LeftContainer, Link, RightContainer, Title } from './styles';
+import { Button, Container, Form, InputContainer, LeftContainer, RightContainer, Title } from './styles';
 
 export function Login() {
 
     return (
         <Container>
             <LeftContainer>
-            <img src="/src/assets/logo.png" alt="logo-deuburger"/>
+            <img src="/src/assets/logo.svg" alt="logo-deuburger"/>
             </LeftContainer>
             <RightContainer>
                 <Title>
-                    Olá, seja bem vindo ao <span> Deu burger! </span> Acesse com seu <span>Login e senha.</span> 
+                    Olá, seja bem vindo ao <span> Deu burger! </span>
+                    <br/>
+                     Acesse com seu <span>Login e senha.</span> 
                 </Title>
                 <Form>
                     <InputContainer>
@@ -23,7 +25,7 @@ export function Login() {
                     </InputContainer>
                     <Button>Entrar</Button>
                     </Form>
-                    <Link>Não possui conta? Clique aqui</Link>
+                    <p>Não possui conta? <a>Clique aqui.</a></p>
             </RightContainer>
 
         </Container>
