@@ -57,6 +57,7 @@ font-family: "Road Rage", serif;
   color: #fff;
   
   span {
+    font-family: "Road Rage", serif;
     color: #9758a6;
   }
 `;
@@ -96,4 +97,3 @@ label {
 
 export const Link = styled.a``;
 
-export const Button = styled.button``;
