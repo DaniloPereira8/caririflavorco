@@ -26,7 +26,8 @@ background: linear-gradient(
 ),
 
 url('${Background}');
-height: 500px;
+height: 800px;
 `;
 
-export const Content = styled.div``;
+// export const Content = styled.div``;
+//ficou como div, mas se for usar precisa alterar para content no index
