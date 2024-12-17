@@ -33,12 +33,12 @@ export function Login() {
             success: {
                 render() {
                     setTimeout(() => {
-                        navigate('/')
+                        navigate('/');
                     }, 2000);
                     return 'Seja bem-vindo(a) 👌';
                 },
             },
-            error: 'Email ou senha Invalidos 🤯'
+            error: 'Email ou senha Invalidos 🤯',
         },
        );
        localStorage.setItem('token', token);
@@ -66,7 +66,7 @@ export function Login() {
 
                     <InputContainer>
                     <label>Senha</label>
-                    <input type="Passoword" {...register('password')}/>
+                    <input type="password" {...register('password')}/>
                     <p>{errors?.password?.message}</p>
                     </InputContainer>
                     <Button type="submit">Entrar</Button>

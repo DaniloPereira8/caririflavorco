@@ -10,7 +10,7 @@ import {Button} from '../../components/button';
 import {api} from '../../services/api';
 
 export function Register() {
-    const navegate = useNavigate();
+    const navigate = useNavigate();
 
     const schema = yup.object({
         name: yup.string().required('O nome é Obrigatório'),
@@ -41,7 +41,7 @@ export function Register() {
 
             if (status === 200 || status === 201) {
                 setTimeout(() => {
-                    navegate('/login');
+                    navigate('/login');
                 }, 2000);
                 toast.success('Conta criada com sucesso!');
             } else if (status === 409 ) {
@@ -79,13 +79,13 @@ export function Register() {
 
                     <InputContainer>
                     <label>Senha</label>
-                    <input type="Passoword" {...register('password')}/>
+                    <input type="password" {...register('password')}/>
                     <p>{errors?.password?.message}</p>
                     </InputContainer>
 
                     <InputContainer>
                     <label>Confirmar Senha</label>
-                    <input type="Passoword" {...register('confirmPassword')}/>
+                    <input type="Password" {...register('confirmPassword')}/>
                     <p>{errors?.confirmPassword?.message}</p>
                     </InputContainer>
 
