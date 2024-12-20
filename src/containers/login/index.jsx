@@ -2,7 +2,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { useUser } from '../../hooks/UserContext';
 
 import Logo from '../../assets/Logo.svg';
 import { Container, Form, InputContainer, LeftContainer, RightContainer, Title, Link } from './styles';
@@ -10,8 +11,8 @@ import {Button} from '../../components/button';
 import {api} from '../../services/api';
 
 export function Login() {
-
     const navigate = useNavigate();
+    const { putUserData } = useUser();
 
     const schema = yup.object({
         email: yup.string().email('Digite um e-mail válido').required('O e-mail é obrigatório'),
@@ -22,7 +23,7 @@ export function Login() {
         resolver: yupResolver(schema)
       });
       const onSubmit = async (data) => {
-       const {data: {token}, 
+       const {data: userData
     } = await toast.promise(
         api.post('/sessions', {
             email: data.email,
@@ -41,7 +42,7 @@ export function Login() {
             error: 'Email ou senha Invalidos 🤯',
         },
        );
-       localStorage.setItem('token', token);
+       putUserData(userData);
        
       };
 
