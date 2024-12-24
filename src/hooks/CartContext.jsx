@@ -61,7 +61,7 @@ export const CartProvider = ({ children }) => {
         if (cartProducts[cartIndex].quantity > 1) {
             const newCart = cartProducts.map((prd) => {
                 return prd.id === productId
-                    ? { ...product, quantity: prd.quantity - 1 }
+                    ? { ...prd, quantity: prd.quantity - 1 }
                     : prd
             })
 

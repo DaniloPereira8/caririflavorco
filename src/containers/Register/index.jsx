@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom'
 
 import Logo from '../../assets/Logo.svg';
 import { Container, Form, InputContainer, LeftContainer, RightContainer, Title, Link } from './styles';
-import {Button} from '../../components/button';
+import {Button} from '../../components/Button';
 import {api} from '../../services/api';
 
 export function Register() {
