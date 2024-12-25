@@ -1,4 +1,4 @@
-export * from './button';
+export * from './Button';
 export * from './CardProduct';
 export * from './CartButton';
 export * from './CategoriesCarousel';
@@ -7,4 +7,6 @@ export * from './Header';
 export * from './OffersCarousel';
 export * from './Table';
 export * from './CartResume';
-export * from './CartItems'
+export * from './CartItems';
+// export * from './Stripe/CheckoutForm'
+export { default as CheckoutForm } from './Stripe/CheckoutForm';
