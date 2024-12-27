@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 72px;
   width: 100%;
   padding: 0 56px;
-  background-color: #1f1f1f;
+  background-color: ${(props) => props.theme.mainBlack};
 `;
 
 export const Content = styled.div`
@@ -33,20 +33,19 @@ div {
 
 hr {
     height: 24px;
-    border: 1px solid #625e5e;
+    border: 1px solid ${(props)=>props.theme.darkGray};
 }
 `;
 
 export const HeaderLink = styled(Link)`
-color: ${(props) => (props.$isActive ? '#9758a6' : '#fff' )};
-border-bottom: ${(props) => (props.$isActive ? '1px solid #9758a6' : 'none' )};
+color: ${(props) => (props.$isActive ? (props) = `1px solid ${(props) => props.theme.purple}` : 'none' )};
 padding-bottom: 5px;
 text-decoration: none;
 font-size: 14px;
 transition: color 200ms;
 
 &:hover {
-    color: #9758a6;
+    color: ${(props) => props.theme.darkWhite};
 }
 
 `;
@@ -65,13 +64,13 @@ gap: 12px;
 font-size: 14px;
 
 p {
-   color : #fff ;
+   color : ${(props) => props.theme.white} ;
    line-height: 90%;
    font-weight: 300;
 
    span {
     font-weight: 700;
-    color: #9758a6;
+    color: ${(props) => props.theme.purple};
    }
 }
 `;
@@ -83,7 +82,7 @@ gap: 10px;
 `;
 
 export const Logout = styled.button`
-color: #ff3205;
+color: ${(props) => props.theme.red};
 text-decoration: none;
 font-weight: 700;
 background-color: transparent;

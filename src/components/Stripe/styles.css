@@ -198,10 +198,12 @@
   }
   
   #view-details {
+    text-decoration: none;
     color: #0055DE;
   }
   
   #retry-button {
+    text-decoration: none;
     text-align: center;
     background: #0055DE;
     color: #ffffff;

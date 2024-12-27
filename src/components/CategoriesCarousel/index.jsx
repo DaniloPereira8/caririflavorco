@@ -59,9 +59,12 @@ export function CategoriesCarousel() {
                     <CategoryButton
                     
                     onClick={() => {
+                        
                         navigate({
                             pathname: '/cardapio',
                             search: `?categoria=${category.id}`,
+
+                            
                         });
                     }}
                     

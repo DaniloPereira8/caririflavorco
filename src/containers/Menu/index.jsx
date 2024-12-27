@@ -27,6 +27,7 @@ export function Menu() {
 
 
   useEffect(() => {
+
     async function loadCategories() {
       const { data } = await api.get('/categories');
 
@@ -51,6 +52,7 @@ export function Menu() {
   }, []);
 
   useEffect(() => {
+
     if(activeCategory === 0) {
       setFilteredProducts(products);
     }else {
