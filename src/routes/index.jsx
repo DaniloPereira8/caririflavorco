@@ -1,53 +1,24 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
 import { Cart, Login, Register, Home, Menu, Checkout, CompletePayment } from '../containers';
+import { UserLayout } from '../layouts/UserLayout';
 
 
+export function Router() {
+    return (
+        <Routes>
 
-export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: (
-            <>
-                <Header />
-                <Home />
-                <Footer />
-            </>
-        ),
-    },
-    {
-        path: '/login',
-        element: <Login />,
-    },
-    {
-        path: '/cadastro',
-        element: <Register />,
-    },
+            <Route path='/' element={<UserLayout />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/cardapio' element={<Menu />} />
+            <Route path='/carrinho' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
+            <Route path='/complete' element={<CompletePayment />} />
+            </Route>
 
-    {
-        path: '/cardapio',
-        element: (<>
-            <Header />
-            <Menu />
-        </>
-        ),
-    },
+            <Route path='/login' element={<Login />} />
+            <Route path='/cadastro' element={<Register />} />
 
-    {
-        path: '/carrinho',
-        element: <Cart/>,
-    },
-
-    {
-        path: '/checkout',
-        element: <Checkout/>,
-    },
-
-    {
-        path: '/complete',
-        element: <CompletePayment/>,
-    },
-
-]);
+        </Routes>
+    )
+}
