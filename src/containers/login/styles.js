@@ -80,11 +80,13 @@ gap: 5px;
 width: 100%;
 
 input {
+    font-size: 15px;
     width: 100%;
     border: none;
     height: 52px;
     border-radius: 5px;
-    padding: 0;
+    padding: 10px;
+    
 
 }
 

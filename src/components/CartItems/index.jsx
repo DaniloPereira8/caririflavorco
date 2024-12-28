@@ -1,6 +1,6 @@
 import { Table } from '../index';
 import { useCart } from '../../hooks/CartContext';
-import { formatPrice } from '../../utils/formatCurrency';
+import { formatPrice } from '../../utils/formatPrice';
 import { ButtonGroup, EmptyCart, ProductImage, ProductTotalPrice, TrashImage } from './styles';
 import TrashIcon from '../../assets/trash.svg'
 

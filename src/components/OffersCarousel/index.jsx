@@ -6,7 +6,7 @@ import {api} from '../../services/api';
 import { Container, Title} from './styles';
 
 import 'react-multi-carousel/lib/styles.css';
-import { formatPrice } from '../../utils/formatCurrency'
+import { formatPrice } from '../../utils/formatPrice'
 import { CardProduct } from '../CardProduct';
 // import { Container } from '../../containers/Home/styles';
 // import { Title } from '../../containers/Login/styles';

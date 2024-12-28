@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import {api} from '../../services/api';
@@ -13,8 +12,8 @@ export function CategoriesCarousel() {
 
     useEffect(() => {
         async function loadCategories() {
+        
             const {data} = await api.get('/categories');
-
             setCategories(data);
         }
 
@@ -55,7 +54,7 @@ export function CategoriesCarousel() {
                 >
 
                     {categories.map ( (category) => (
-                <ContainerItems key={category.id}imageUrl={category.url}>
+                <ContainerItems key={category.id} imageurl={category.url}>
                     <CategoryButton
                     
                     onClick={() => {
@@ -65,7 +64,8 @@ export function CategoriesCarousel() {
                             search: `?categoria=${category.id}`,
 
                             
-                        });
+                        }
+                    );
                     }}
                     
                     >{category.name}

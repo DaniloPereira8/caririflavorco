@@ -7,7 +7,7 @@ import { useUser } from '../../hooks/UserContext';
 
 import Logo from '../../assets/Logo.svg';
 import { Container, Form, InputContainer, LeftContainer, RightContainer, Title, Link } from './styles';
-import {Button} from '../../components/button';
+import {Button} from '../../components/Button';
 import {api} from '../../services/api';
 
 export function Login() {
@@ -34,7 +34,12 @@ export function Login() {
             success: {
                 render() {
                     setTimeout(() => {
-                        navigate('/');
+                        if (userData?.admin) {
+                            navigate('/admin/pedidos');
+                        } else {
+                            navigate('/');
+                        }
+                        
                     }, 2000);
                     return 'Seja bem-vindo(a) 👌';
                 },

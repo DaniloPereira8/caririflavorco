@@ -154,6 +154,7 @@
     width: 40px;
     border-radius: 50%;
   }
+
   
   #dpm-integration-checker {
     text-decoration: none;
@@ -169,6 +170,11 @@
   #details-table {
     overflow-x: auto;
     width: 100%;
+  }
+
+  #dpm-annotation {
+    margin-bottom: 100px;
+    text-align: center;
   }
   
   table {

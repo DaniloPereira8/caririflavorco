@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Container, Banner, CategoryMenu, ProductsContainer, CategoryButton } from './style';
 import { api } from '../../services/api';
-import { formatPrice } from '../../utils/formatCurrency';
+import { formatPrice } from '../../utils/formatPrice';
 import { CardProduct } from '../../components/CardProduct';
 import { useLocation, useNavigate } from 'react-router-dom';
 

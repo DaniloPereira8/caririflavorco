@@ -6,6 +6,11 @@ export const Container = styled.div`
   width: 100%;
   padding: 0 56px;
   background-color: ${(props) => props.theme.mainBlack};
+  z-index: 1000; 
+  position: fixed; 
+  top: 0;         
+  left: 0;         
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
 `;
 
 export const Content = styled.div`
@@ -38,14 +43,15 @@ hr {
 `;
 
 export const HeaderLink = styled(Link)`
-color: ${(props) => (props.$isActive ? (props) = `1px solid ${(props) => props.theme.purple}` : 'none' )};
+color: ${(props ) =>  (props.$isActive ? props.theme.purple : props =>  props.theme.white)};
+border-bottom: ${( props )=> ( props.$isActive ? `1px solid ${ props.theme.purple}` : 'none')};
 padding-bottom: 5px;
 text-decoration: none;
 font-size: 14px;
 transition: color 200ms;
 
 &:hover {
-    color: ${(props) => props.theme.darkWhite};
+    color: ${(props) => props.theme.purple};
 }
 
 `;
@@ -87,5 +93,9 @@ text-decoration: none;
 font-weight: 700;
 background-color: transparent;
 border: none;
+`;
+
+export const MainContent = styled.main`
+  padding-top: 70px;   
 `;
 

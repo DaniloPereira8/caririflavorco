@@ -23,5 +23,5 @@ createRoot(document.getElementById('root')).render(
     <ToastContainer autoClose = {3000} theme='colored'/>
     </AppProvider>
     </ThemeProvider>
-  </StrictMode>,
+  </StrictMode>
 )

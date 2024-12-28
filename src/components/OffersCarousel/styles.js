@@ -13,10 +13,12 @@ overflow-x: hidden;
  .react-multiple-carousel__arrow--left {
     left: 15px;
     top: 10px;
+    z-index: 999;
 }
 
 .react-multiple-carousel__arrow--right {
     top: 10px;
+    z-index: 999;
 }
 
 

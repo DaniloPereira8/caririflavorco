@@ -12,6 +12,7 @@ import {
     Navigation,
     Logout,
     Content,
+    MainContent,
 } from './styles';
 
 export function Header () {
@@ -24,6 +25,7 @@ export function Header () {
         navigate('/login');
     }
 return (
+    <>
     <Container>
         <Content>
         <Navigation>
@@ -50,6 +52,10 @@ return (
         </Options>
         </Content>
     </Container>
+
+<MainContent> </MainContent>
+</>
+
 );
 
 }

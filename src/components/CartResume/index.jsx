@@ -3,7 +3,7 @@ import { Container } from './styles';
 import { toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
 import {useCart} from '../../hooks/CartContext';
-import { formatPrice } from '../../utils/formatCurrency';
+import { formatPrice } from '../../utils/formatPrice';
 import { api } from '../../services/api';
 import { useNavigate } from 'react-router-dom';
 

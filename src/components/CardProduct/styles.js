@@ -7,7 +7,7 @@ align-items: center;
 gap: 40px;
 padding: 20px;
 border-radius: 8px;
-background-color: ${(props) => props.theme.white}fff;
+background-color: ${(props) => props.theme.white};
 cursor: grab;
 box-shadow: rgba(0,0,0, 0.35) 0px 5px 15px;
 position: relative;
