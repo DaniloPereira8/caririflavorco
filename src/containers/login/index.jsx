@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../hooks/UserContext';
 
-import Logo from '../../assets/Logo.svg';
+import Logo from '../../assets/logologin.png';
 import { Container, Form, InputContainer, LeftContainer, RightContainer, Title, Link } from './styles';
 import {Button} from '../../components/Button';
 import {api} from '../../services/api';
@@ -41,7 +41,7 @@ export function Login() {
                         }
                         
                     }, 2000);
-                    return 'Seja bem-vindo(a) 👌';
+                    return 'Seja bem-vindo(a) 🥰';
                 },
             },
             error: 'Email ou senha Invalidos 🤯',
@@ -59,7 +59,7 @@ export function Login() {
             </LeftContainer>
             <RightContainer>
                 <Title>
-                    Olá, seja bem vindo ao <span> Deu burger! </span>
+                    Olá, seja bem vindo ao <span> Cariri Flavor CO! </span>
                     <br/>
                      Acesse com seu <span>Login e senha.</span> 
                 </Title>

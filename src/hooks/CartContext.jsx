@@ -6,6 +6,9 @@ const CartContext = createContext({})
 export const CartProvider = ({ children }) => {
     const [cartProducts, setCartProducts] = useState([])
 
+    const totalItems = cartProducts.reduce((acc, product) => acc + product.quantity, 0);
+
+
 
     const putProductInCart = (product) => {
         const cartIndex = cartProducts.findIndex((prd) => prd.id === product.id)
@@ -89,6 +92,7 @@ export const CartProvider = ({ children }) => {
 
         return (<CartContext.Provider value={{
             cartProducts,
+            totalItems,
             putProductInCart,
             clearCart,
             decreaseProduct,

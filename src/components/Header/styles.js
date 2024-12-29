@@ -85,6 +85,8 @@ export const LinkContainer = styled.div`
 display: flex;
 align-items: center;
 gap: 10px;
+
+position: relative;
 `;
 
 export const Logout = styled.button`
@@ -97,5 +99,17 @@ border: none;
 
 export const MainContent = styled.main`
   padding-top: 70px;   
+`;
+
+
+export const CartItemCount = styled.span`
+    background-color: #ff714b; /* Cor de destaque */
+    color: white;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    position: absolute; /* Posiciona o contador em cima do ícone */
+    top: -5px; /* Ajuste a posição vertical */
+    right: -5px; /* Ajuste a posição horizontal */
 `;
 

@@ -35,7 +35,7 @@ const schema = yup.object({
       return value && value.length > 0;
     })
     .test("fileSize", "Carregue arquivo até 5mb", (value) => {
-      return value && value.length > 0 && value[0].size <= 50000;
+      return value && value.length > 0 && value[0].size <= 5242880;
     })
     .test("type", "Carregueapenas imagens PNG e JPEG", (value) => {
       return (

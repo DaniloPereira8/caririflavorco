@@ -5,7 +5,7 @@ export const Container = styled.div`
   .MuiTableHead-root {
     font-weight: bolder;
     color:  ${(props) => props.theme.white};
-    background: #9758a6;
+    background: #A02644;
     border-radius: 5px;
   }
   `;

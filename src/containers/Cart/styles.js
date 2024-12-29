@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Texture from '../../assets/texture.svg'
+import Texture from '../../assets/backgroundlogin.png'
 import Background from '../../assets/Background.svg';
 
 
