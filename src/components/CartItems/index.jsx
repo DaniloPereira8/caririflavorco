@@ -1,7 +1,7 @@
 import { Table } from '../index';
 import { useCart } from '../../hooks/CartContext';
 import { formatPrice } from '../../utils/formatPrice';
-import { ButtonGroup, EmptyCart, ProductImage, ProductTotalPrice, TrashImage } from './styles';
+import { ButtonGroup, ProductImage, ProductTotalPrice, TrashImage } from './styles';
 import TrashIcon from '../../assets/trash.svg'
 
 export function CartItems() {
@@ -70,7 +70,11 @@ export function CartItems() {
                             </Table.Tr>
                         ))
                     ) : (
-                        <EmptyCart>Carrinho vazio</EmptyCart>
+                        <Table.Tr>
+                            <Table.Td colSpan={6} style={{ textAlign: 'center', fontWeight: 'bold'}}>
+                            Carrinho vazio
+                            </Table.Td>
+                        </Table.Tr>
                     )}
                 </Table.Body>
             </Table.Root>

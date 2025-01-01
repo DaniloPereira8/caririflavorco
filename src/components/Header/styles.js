@@ -47,7 +47,8 @@ color: ${(props ) =>  (props.$isActive ? props.theme.purple : props =>  props.th
 border-bottom: ${( props )=> ( props.$isActive ? `1px solid ${ props.theme.purple}` : 'none')};
 padding-bottom: 5px;
 text-decoration: none;
-font-size: 14px;
+font-size: 18px;
+font-weight: bold;
 transition: color 200ms;
 
 &:hover {
@@ -67,7 +68,7 @@ export const Profile = styled.div`
 display: flex;
 align-items: center;
 gap: 12px;
-font-size: 14px;
+font-size: 18px;
 
 p {
    color : ${(props) => props.theme.white} ;
@@ -78,6 +79,17 @@ p {
     font-weight: 700;
     color: ${(props) => props.theme.purple};
    }
+}
+
+div {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+hr {
+    height: 24px;
+    border: 1px solid ${(props)=>props.theme.darkGray};
 }
 `;
 
@@ -91,6 +103,7 @@ position: relative;
 
 export const Logout = styled.button`
 color: ${(props) => props.theme.red};
+font-size: 18px;
 text-decoration: none;
 font-weight: 700;
 background-color: transparent;

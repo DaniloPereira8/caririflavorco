@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const api = axios.create({
 
-    baseURL: 'https://cariri-flavor-co-api.onrender.com'
+   baseURL: 'http://localhost:3001'
 });
 
 api.interceptors.request.use( (config) => {

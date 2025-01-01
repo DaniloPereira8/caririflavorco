@@ -49,12 +49,13 @@ export function Header() {
                                 <p>
                                     Olá, <span>{userInfo.name}</span>
                                 </p>
+                                <hr/>
                                 <Logout onClick={logoutUser}>Sair</Logout>
                             </div>
                         </Profile>
                         <LinkContainer>
                         <HeaderLink to="/carrinho">
-                            <ShoppingCart color="#fff" size={40} />
+                            <ShoppingCart color="#fff" size={38} />
                              {totalItems > 0 && (<CartItemCount>{totalItems}</CartItemCount>
                                 )}
                             </HeaderLink>
