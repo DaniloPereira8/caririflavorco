@@ -1,17 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
-import {
-  Cart,
-  Checkout,
-  CompletePayment,
-  EditProduct,
-  Home,
-  Login,
-  Menu,
-  NewProduct,
-  Orders,
-  Products,
-  Register,
+import { 
+  Cart, Checkout, CompletePayment, EditProduct, Home,
+  Login, Menu, NewProduct, Orders, Products, Register,
 } from "../containers";
 
 import { UserLayout } from "../layouts/UserLayout";

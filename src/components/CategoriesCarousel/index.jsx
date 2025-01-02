@@ -52,14 +52,33 @@ export function CategoriesCarousel() {
                 itemClass="carousel-item"
 
                 >
+                    
+                    {categories &&
+                    categories.map ( (category) => (
+                <ContainerItems key={category.id}
+                 imageurl={category.url}>
+                    <CategoryButton 
+                    
+                    to={{
+                            
+                            pathname: '/cardapio',
+                            state: { categoryId: category.id}
 
-                    {categories.map ( (category) => (
+                            
+                        }}
+                    
+                    
+                    >
+                        {category.name}
+
+                    {/* {categories.map ( (category) => (
                 <ContainerItems key={category.id} imageurl={category.url}>
                     <CategoryButton
                     
                     onClick={() => {
                         
                         navigate({
+                            
                             pathname: '/cardapio',
                             search: `?categoria=${category.id}`,
 
@@ -68,7 +87,8 @@ export function CategoriesCarousel() {
                     );
                     }}
                     
-                    >{category.name}
+                    >
+                        {category.name} */}
                     </CategoryButton>
                     
                     </ContainerItems>
