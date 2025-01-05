@@ -6,9 +6,9 @@ export function Cart() {
     return(
         <Container>
             <Banner>
-                <img src={Logo} alt= 'Logodeuburger'/>
+                {/* <img src={Logo} alt= 'Logodeuburger'/> */}
             </Banner>
-            <Title>Checkout - Pedido</Title>
+            <Title>Concluir Pedido</Title>
             <Content>
                 <CartItems/>
                 <CartResume/>

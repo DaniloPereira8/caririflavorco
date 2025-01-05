@@ -44,7 +44,7 @@ export function CategoriesCarousel() {
     
     return (
         <Container>
-            <Title>Categorias</Title>
+            <Title>Opções de Cardápio</Title>
             <Carousel
                 responsive={responsive}
                 infinite={true}
@@ -52,26 +52,8 @@ export function CategoriesCarousel() {
                 itemClass="carousel-item"
 
                 >
-                    
-                    {categories &&
-                    categories.map ( (category) => (
-                <ContainerItems key={category.id}
-                 imageurl={category.url}>
-                    <CategoryButton 
-                    
-                    to={{
-                            
-                            pathname: '/cardapio',
-                            state: { categoryId: category.id}
 
-                            
-                        }}
-                    
-                    
-                    >
-                        {category.name}
-
-                    {/* {categories.map ( (category) => (
+                    {categories.map ( (category) => (
                 <ContainerItems key={category.id} imageurl={category.url}>
                     <CategoryButton
                     
@@ -88,7 +70,7 @@ export function CategoriesCarousel() {
                     }}
                     
                     >
-                        {category.name} */}
+                        {category.name}
                     </CategoryButton>
                     
                     </ContainerItems>

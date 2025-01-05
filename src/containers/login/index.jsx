@@ -41,7 +41,7 @@ export function Login() {
                         }
                         
                     }, 2000);
-                    return 'Seja bem-vindo(a) 🥰';
+                    return 'Seja bem-vindo(a) 🍔';
                 },
             },
             error: 'Email ou senha Invalidos 🤯',

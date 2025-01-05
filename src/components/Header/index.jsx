@@ -34,11 +34,15 @@ export function Header() {
                     <Navigation>
                         <div>
                             <HeaderLink to="/" $isActive={pathname === '/'}>
-                                Home
+                                Início
                             </HeaderLink>
                             <hr />
                             <HeaderLink to="/cardapio" $isActive={pathname === '/cardapio'}>
                                 Cardápio
+                            </HeaderLink>
+                            <hr />
+                            <HeaderLink to="/meus-pedidos" $isActive={pathname === '/meus-pedidos'}>
+                                Acompanhar status do pedido
                             </HeaderLink>
                         </div>
                     </Navigation>
@@ -49,14 +53,14 @@ export function Header() {
                                 <p>
                                     Olá, <span>{userInfo.name}</span>
                                 </p>
-                                <hr/>
+                                <hr />
                                 <Logout onClick={logoutUser}>Sair</Logout>
                             </div>
                         </Profile>
                         <LinkContainer>
-                        <HeaderLink to="/carrinho">
-                            <ShoppingCart color="#fff" size={38} />
-                             {totalItems > 0 && (<CartItemCount>{totalItems}</CartItemCount>
+                            <HeaderLink to="/carrinho">
+                                <ShoppingCart color="#fff" size={38} />
+                                {totalItems > 0 && (<CartItemCount>{totalItems}</CartItemCount>
                                 )}
                             </HeaderLink>
                         </LinkContainer>

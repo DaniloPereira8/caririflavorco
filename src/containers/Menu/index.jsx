@@ -69,13 +69,13 @@ export function Menu() {
     <Container>
 
       <Banner>
-        <h1>O MELHOR
+        <h1>NÃO É SÓ UM
           <br />
-          HAMBURGUER
+          HAMBÚRGUER, É UMA
           <br />
-          ESTA AQUI!
+        EXPERIÊNCIA DE SABOR!
 
-          <span>Esse cardápio está irresistível!</span>
+          <span>Coma bem, gaste menos!</span>
         </h1>
       </Banner>
 

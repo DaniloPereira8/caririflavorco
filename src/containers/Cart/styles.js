@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Texture from '../../assets/backgroundlogin.png'
+import Texture from '../../assets/bannercheck.png'
 import Background from '../../assets/Background.svg';
 
 
@@ -24,7 +24,7 @@ align-items: center;
 justify-content: center;
 position: relative;
 
-height: 180px;
+height: 220px;
 
 img {
     height: 130px;

@@ -14,3 +14,13 @@ api.interceptors.request.use( (config) => {
 
     return  config;
 });
+
+export const fetchClientOrders = async () => {
+    try {
+        const response = await api.get('/client/orders'); // Faz a chamada à rota do back-end
+        return response.data; // Retorna os dados dos pedidos
+    } catch (error) {
+        console.error('Erro ao buscar os pedidos:', error);
+        throw error;
+    }
+};

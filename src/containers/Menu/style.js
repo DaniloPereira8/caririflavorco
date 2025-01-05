@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BannerHamburger from '../../assets/bannerhamburguer.svg'
+import BannerHamburger from '../../assets/offer.png'
 import Background from '../../assets/Background.svg';
 import { Link } from "react-router-dom";
 
@@ -20,7 +20,7 @@ export const Banner = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-height: 480px;
+height: 400px;
 width: 100%;
 position: relative;
 
@@ -36,9 +36,9 @@ h1 {
     line-height: 65px;
     color: ${(props) => props.theme.white};
     position: absolute;
-
-    right: 20%;
-    top: 30%;
+    left: 0;
+    top: 25%;
+    padding-left: 100px;
 
     span {
         display: block;

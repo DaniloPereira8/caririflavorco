@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BannerHome from '../../assets/banner-home.svg';
+import BannerHome from '../../assets/home.png';
 import Background from '../../assets/Background.svg';
 
 export const Banner = styled.div`
@@ -13,8 +13,9 @@ h1 {
     font-size: 80px;
     color: ${(props) => props.theme.darkWhite};
     position: absolute;
-    right: 20%;
-    top: 10%;
+    left: 0;
+    padding-left: 100px;
+    top: 30%;
 }
 `;
 
