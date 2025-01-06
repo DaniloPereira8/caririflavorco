@@ -1,8 +1,8 @@
 import { Link as ReactLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import BackgroundLogin from '../../assets/backgroundlogin.png';
-import Background from '../../assets/background.svg';
+import BackgroundRegister from '../../assets/background.svg';
+import Background from '../../assets/background-login-register.png';
 
 export const Container = styled.div`
 display: flex;
@@ -11,7 +11,7 @@ width:100vw;
 `;
 
 export const LeftContainer = styled.div`
-background: url('${BackgroundLogin}');
+background: url('${BackgroundRegister}');
 background-size: cover;
 background-position: center;
 
@@ -21,6 +21,7 @@ max-width: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
+background-color: #1e1e1e;
 
 img {
     width: 100%;
@@ -38,7 +39,6 @@ background: url('${Background}');
 height: 100%;
 width: 100%;
 max-width: 50%;
-background-color: #1e1e1e;
 
 p {
     color: ${(props) => props.theme.white};
@@ -63,7 +63,7 @@ font-family: "Road Rage", serif;
 export const Form = styled.form`
 display: flex;
 flex-direction: column;
-gap: 20px;
+gap: 7px;
 padding: 20px;
 width: 100%;
 max-width: 400px;

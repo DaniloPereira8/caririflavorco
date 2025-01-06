@@ -1,0 +1,130 @@
+.address-form {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 60px auto 0 auto; /* Adiciona espaço superior */
+    width: 100%;
+    /* margin: auto; */
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.address-form:hover {
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    border: 2px solid rgba(0, 85, 222, 0.2);
+}
+
+.address-form h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #4A4A4A;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;
+    background-color: #F9F9F9;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+    color: #30313D;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-input:focus {
+    border-color: #0055DE;
+    box-shadow: 0 0 10px rgba(0, 85, 222, 0.4);
+    background-color: #ffffff;
+    transform: scale(1.02);
+}
+
+.form-input::placeholder {
+    color: #B0B0B0;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #0055DE, #0044b3);
+    color: white;
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #0044b3, #0055DE);
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 85, 222, 0.3);
+}
+
+.submit-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .address-form {
+        padding: 30px;
+    }
+    
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-input,
+    .submit-btn {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+}
+
+/* Estilo de animação de suavização para o formulário */
+@keyframes fadeInForm {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.address-form {
+    animation: fadeInForm 1s ease-out;
+}

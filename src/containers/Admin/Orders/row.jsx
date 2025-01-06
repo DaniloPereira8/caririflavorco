@@ -12,28 +12,34 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useState } from "react";
 import { formatDate } from "../../../utils/formatDate";
-import { ProductImage, SelectStatus } from "./styles";
+import {
+  AddressLine,
+  AddressWrapper,
+  Label,
+  ProductImage,
+  SelectStatus,
+} from "./styles";
 import { ordersStatusOptions } from "./ordersStatus";
 import { api } from "../../../services/api";
 
-export function Row({row, setOrders, orders}) {
+export function Row({ row, setOrders, orders }) {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
   async function newStatusorder(id, status) {
     try {
       setLoading(true);
-      await api.put(`orders/${id}`, {status});
+      await api.put(`orders/${id}`, { status });
 
-      const newOrders = orders.map( order => order._id === id ? {...order, status} : order,
+      const newOrders = orders.map((order) =>
+        order._id === id ? { ...order, status } : order
       );
 
       setOrders(newOrders);
-    } catch(error){
+    } catch (error) {
       console.log(error);
-    }
-    finally {
-      setLoading(false)
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -58,12 +64,12 @@ export function Row({row, setOrders, orders}) {
           <SelectStatus
             options={ordersStatusOptions.filter((status) => status.is !== 0)}
             placeholder="Status"
-            defaultValue={ ordersStatusOptions.find( 
-              status => status.value === row.status || null,
+            defaultValue={ordersStatusOptions.find(
+              (status) => status.value === row.status || null
             )}
-           onChange={ status => newStatusorder(row.orderId, status.value)}
-           isLoading={loading}
-           menuPortalTarget={document.body}
+            onChange={(status) => newStatusorder(row.orderId, status.value)}
+            isLoading={loading}
+            menuPortalTarget={document.body}
           />
         </TableCell>
       </TableRow>
@@ -74,13 +80,38 @@ export function Row({row, setOrders, orders}) {
               <Typography variant="h6" gutterBottom component="div">
                 Pedido
               </Typography>
+              <AddressWrapper>
+                <AddressLine>
+                  <Label>Nome:</Label>{" "}
+                  {row.address ? row.address.name : "Nome não fornecido"}
+                </AddressLine>
+                <AddressLine>
+                  <Label>Endereço:</Label>
+                  {row.address &&
+                  row.address.street &&
+                  row.address.number &&
+                  row.address.neighborhood
+                    ? `${row.address.street}, ${row.address.number}, ${row.address.neighborhood}`
+                    : "Endereço não fornecido"}
+                </AddressLine>
+                <AddressLine>
+                  <Label>Ponto de Referência:</Label>{" "}
+                  {row.address
+                    ? row.address.referencePoint
+                    : "Ponto de referência não fornecido"}
+                </AddressLine>
+                <AddressLine>
+                  <Label>Contato:</Label>{" "}
+                  {row.address ? row.address.contact : "Contato não fornecido"}
+                </AddressLine>
+              </AddressWrapper>
               <Table size="small" aria-label="purchases">
                 <TableHead>
                   <TableRow>
                     <TableCell>Quantidade</TableCell>
                     <TableCell>Produto</TableCell>
                     <TableCell>Categoria</TableCell>
-                    <TableCell>Image do Produto</TableCell>
+                    <TableCell>Imagem do Produto</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -110,7 +141,7 @@ Row.propTypes = {
   orders: PropTypes.array.isRequired,
   setOrders: PropTypes.func.isRequired,
   row: PropTypes.shape({
-    oderId: PropTypes.string.isRequired,
+    orderId: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     products: PropTypes.arrayOf(

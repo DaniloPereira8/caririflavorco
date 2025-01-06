@@ -7,7 +7,7 @@ import { api } from "../../../services/api";
 import { toast } from "react-toastify";
 
 
-export default function CheckoutForm() {
+export default function CheckoutForm({ address }) {
       const{cartProducts, clearCart} = useCart();
       const navigate = useNavigate();
 
@@ -24,37 +24,39 @@ export default function CheckoutForm() {
     e.preventDefault();
 
     if (!stripe || !elements) {
-        console.error('Stripe ou Elements com falha, tente novamente mais tarde!')
-      return;
+        console.error("Stripe ou Elements com falha, tente novamente mais tarde!");
+        return;
+    }
+
+    if (!address || !address.street || !address.number || !address.neighborhood || !address.contact) {
+        toast.error("Por favor, preencha todos os campos obrigatórios do endereço antes de continuar.");
+        return;
     }
 
     setIsLoading(true);
 
-    const { error, paymentIntent} = await stripe.confirmPayment({
-      elements,
-      redirect: 'if_required',
+    const { error, paymentIntent } = await stripe.confirmPayment({
+        elements,
+        redirect: "if_required",
     });
 
-    
     if (error) {
-      setMessage(error.message);
-      toast.error(error.message)
-    } else if (paymentIntent && paymentIntent.status === 'succeeded'){
-           try {
-
-            const products = cartProducts.map((product) => {
-              return {
+        setMessage(error.message);
+        toast.error(error.message);
+    } else if (paymentIntent && paymentIntent.status === "succeeded") {
+        try {
+            const products = cartProducts.map((product) => ({
                 id: product.id,
-                 quantity: product.quantity,
-                  price: product.price
-                };
-          });
+                quantity: product.quantity,
+                price: product.price,
+            }));
 
             const { status } = await api.post(
-                '/orders', {products},
+                "/orders",
+                { products, address }, // Envia o endereço junto com os produtos
                 {
                     validateStatus: () => true,
-                },
+                }
             );
 
             if (status === 200 || status === 201) {
@@ -63,22 +65,22 @@ export default function CheckoutForm() {
                     clearCart();
                 }, 3000);
                 clearCart();
-                toast.success('Pedido realizado com Sucesso!');
-            } else if (status === 409 ) {
-                toast.error('Falha ao realizar o seu Pedido');
+                toast.success("Pedido realizado com Sucesso!");
+            } else if (status === 409) {
+                toast.error("Falha ao realizar o seu Pedido");
             } else {
                 throw new Error();
             }
         } catch (error) {
-            toast.error('Falha no sistema! Tente novamente');
+            toast.error("Falha no sistema! Tente novamente");
         }
-      } else {
+    } else {
         navigate(`/complete?payment_intent_client_secret=${paymentIntent.client_secret}`);
-      
     }
 
     setIsLoading(false);
-  };
+};
+
 
   const paymentElementOptions = {
     layout: "accordion"
@@ -86,7 +88,9 @@ export default function CheckoutForm() {
 
   return (
     <div className="container">
+      <br id='espaço-forms'></br>
       <form id="payment-form" onSubmit={handleSubmit}>
+        <h2 id='text-pagamento'>Efetue o Pagamento</h2>
         <PaymentElement id="payment-element" options={paymentElementOptions} />
         <button disabled={isLoading || !stripe || !elements} id="submit" className="button">
           <span id="button-text">

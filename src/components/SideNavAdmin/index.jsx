@@ -1,7 +1,7 @@
 import { SignOut } from "@phosphor-icons/react";
 import { useResolvedPath } from "react-router-dom";
 
-import Logo from "../../assets/logologin.png";
+import Logo from "../../assets/logotipo.png";
 import { useUser } from "../../hooks/UserContext";
 import { navLinks } from "./navLinks";
 import { Container, NavLinkContainer, NavLink, Footer } from "./styles";

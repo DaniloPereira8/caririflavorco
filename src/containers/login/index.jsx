@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../hooks/UserContext';
 
-import Logo from '../../assets/logologin.png';
+import Logo from '../../assets/logotipo.png';
 import { Container, Form, InputContainer, LeftContainer, RightContainer, Title, Link } from './styles';
 import {Button} from '../../components/Button';
 import {api} from '../../services/api';
@@ -55,7 +55,7 @@ export function Login() {
     return (
         <Container>
             <LeftContainer>
-            <img src={Logo} alt="logo-deuburger" />
+            <img src={Logo} alt="logo-burger" />
             </LeftContainer>
             <RightContainer>
                 <Title>

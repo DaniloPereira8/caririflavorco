@@ -1,8 +1,9 @@
 import { Link as ReactLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import BackgroundLogin from '../../assets/backgroundlogin.png';
-import Background from '../../assets/Background.svg';
+import BackgroundLogin from '../../assets/background.svg';
+import Background from '../../assets/Background-login-register.png';
+
 
 export const Container = styled.div`
 display: flex;
@@ -21,6 +22,7 @@ max-width: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
+background-color: #1e1e1e;
 
 img {
     width: 100%;
@@ -34,18 +36,18 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 background: url('${Background}');
+padding-bottom: 3.1rem;
 
 height: 100%;
 width: 100%;
 max-width: 50%;
-background-color: #1e1e1e;
 
 p {
     color: ${(props) => props.theme.white};
     font-size: 18px;
     font-weight: 800;
-
-    a{
+    
+    a {
         text-decoration: underline ;
     }
 }

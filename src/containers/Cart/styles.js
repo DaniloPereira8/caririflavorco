@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Texture from '../../assets/bannercheck.png'
+import Texture from '../../assets/backgroundcheckout.png'
 import Background from '../../assets/Background.svg';
 
 
@@ -27,7 +27,7 @@ position: relative;
 height: 220px;
 
 img {
-    height: 130px;
+    height: 15rem;
 }
 `;
 

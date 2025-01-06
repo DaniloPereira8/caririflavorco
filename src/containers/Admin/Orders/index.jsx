@@ -26,7 +26,7 @@ export function Orders() {
       setOrders(data);
       setFilteredOrders(data);
 
-      console.log(data);
+
     }
     loadOrders();
   }, []);
@@ -38,6 +38,7 @@ export function Orders() {
       date: order.createdAt,
       status: order.status,
       products: order.products,
+      address: order.address,
     };
   }
 
