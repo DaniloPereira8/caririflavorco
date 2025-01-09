@@ -23,6 +23,20 @@ export function CartResume() {
     }, [cartProducts])
 
     const submitOrder = async () => {
+            // Verifica se o carrinho está vazio
+    if (cartProducts.length === 0) {
+        toast.error('Seu carrinho está vazio. Adicione produtos para finalizar a compra.', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+        return; // Retorna sem fazer nada se o carrinho estiver vazio
+    }
         const products = cartProducts.map((product) => {
             return {id: product.id, quantity: product.quantity, price: product.price};
         });
@@ -33,7 +47,7 @@ export function CartResume() {
             state: data,
         })
         } catch (err) {
-            toast.error('🦄 Erro, tente novamente!', {
+            toast.error('🚨🤯 Erro, tente novamente!', {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,

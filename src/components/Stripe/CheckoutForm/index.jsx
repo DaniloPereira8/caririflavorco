@@ -7,7 +7,7 @@ import { api } from "../../../services/api";
 import { toast } from "react-toastify";
 
 
-export default function CheckoutForm({ address }) {
+export default function CheckoutForm({address}) {
       const{cartProducts, clearCart} = useCart();
       const navigate = useNavigate();
 
