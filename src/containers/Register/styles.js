@@ -35,6 +35,10 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 background: url('${Background}');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+padding-bottom: 3.1rem;
 
 height: 100%;
 width: 100%;
@@ -44,12 +48,11 @@ p {
     color: ${(props) => props.theme.white};
     font-size: 18px;
     font-weight: 800;
-
-    a{
-        text-decoration: underline ;
+    
+    a {
+        text-decoration: underline;
     }
 }
-
 `;
 
 export const Title = styled.h2`

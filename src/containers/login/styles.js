@@ -15,6 +15,7 @@ export const LeftContainer = styled.div`
 background: url('${BackgroundLogin}');
 background-size: cover;
 background-position: center;
+background-repeat: no-repeat;
 
 height: 100%;
 width: 100%;
@@ -36,6 +37,9 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 background: url('${Background}');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
 padding-bottom: 3.1rem;
 
 height: 100%;
@@ -48,11 +52,11 @@ p {
     font-weight: 800;
     
     a {
-        text-decoration: underline ;
+        text-decoration: underline;
     }
 }
-
 `;
+
 
 export const Title = styled.h2`
 font-family: "Road Rage", serif;
