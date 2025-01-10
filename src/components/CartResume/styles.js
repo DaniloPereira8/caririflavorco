@@ -1,63 +1,158 @@
+// import styled from "styled-components";
+
+// export const Container = styled.div`
+// background-color: ${(props) => props.theme.white};
+// border-radius: 20px;
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// margin-bottom: 20px;
+
+
+// * {
+//     color: ${(props) => props.theme.secondBlack};
+//     font-weight: 500;
+// }
+
+// .container-top {
+//     display: grid;
+//     grid-gap: 10px 30%;
+//     grid-template-areas:
+//     'title title'
+//     'items items-price'
+//     'delivery-tax delivery-tax-price';
+
+//     .title {
+//         grid-area: title;
+//         font-size: 20px;
+//         font-weight: 700;
+//         margin-bottom: 20px;
+//         background-color: ${(props) => props.theme.secondBlack};
+//         color: ${(props) => props.theme.white};
+//         width: 100%;
+//         padding: 15px;
+//         text-align: center;
+//         border-top-left-radius:20px;
+//         border-top-right-radius: 20px;
+//     }
+
+//     .items {
+//         grid-area: items;
+//         padding-left: 20px;
+//     }
+
+//     .items-price {
+//         grid-area: items-price;
+//         padding-right: 20px;
+//     }
+
+//     .delivery-tax {
+//         grid-area: delivery-tax;
+//         padding-left: 20px;
+//     }
+
+//     .delivery-tax-price {
+//         grid-area: delivery-tax-price;
+//         padding-right: 20px;
+//     }
+// }
+
+// .container-bottom {
+//     display: flex;
+//     justify-content: space-between;
+//     font-size: 20px;
+//     font-weight: 700;
+//     margin-top: 24px;
+//     padding: 20px;
+
+//     * {
+//     font-weight: 700;
+//     }
+// }
+// `;
+
 import styled from "styled-components";
 
 export const Container = styled.div`
-background-color: ${(props) => props.theme.white};
-border-radius: 20px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-margin-bottom: 20px;
+  background-color: ${(props) => props.theme.white};
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
 
-
-* {
+  * {
     color: ${(props) => props.theme.secondBlack};
     font-weight: 500;
-}
+  }
 
-.container-top {
+  .container-top {
     display: grid;
     grid-gap: 10px 30%;
     grid-template-areas:
-    'title title'
-    'items items-price'
-    'delivery-tax delivery-tax-price';
+      'title title'
+      'items items-price'
+      'delivery-tax delivery-tax-price';
 
     .title {
-        grid-area: title;
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 20px;
-        background-color: ${(props) => props.theme.secondBlack};
-        color: ${(props) => props.theme.white};
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-        border-top-left-radius:20px;
-        border-top-right-radius: 20px;
+      grid-area: title;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      background-color: ${(props) => props.theme.secondBlack};
+      color: ${(props) => props.theme.white};
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
     }
 
     .items {
-        grid-area: items;
-        padding-left: 20px;
+      grid-area: items;
+      padding-left: 20px;
     }
 
     .items-price {
-        grid-area: items-price;
-        padding-right: 20px;
+      grid-area: items-price;
+      padding-right: 20px;
     }
 
     .delivery-tax {
-        grid-area: delivery-tax;
-        padding-left: 20px;
+      grid-area: delivery-tax;
+      padding-left: 20px;
     }
 
     .delivery-tax-price {
-        grid-area: delivery-tax-price;
-        padding-right: 20px;
+      grid-area: delivery-tax-price;
+      padding-right: 20px;
     }
-}
 
-.container-bottom {
+    /* Ajustes para telas menores */
+    @media (max-width: 768px) {
+      text-align: center;
+      grid-template-areas:
+        'title'
+        'items'
+        'items-price'
+        'delivery-tax'
+        'delivery-tax-price';
+    }
+
+    @media (max-width: 480px) {
+      grid-template-areas:
+        'title'
+        'items'
+        'items-price'
+        'delivery-tax'
+        'delivery-tax-price';
+      grid-gap: 8px;
+      text-align: center;
+      margin: 0px 15px 0px 0px;
+    }
+  }
+
+  .container-bottom {
     display: flex;
     justify-content: space-between;
     font-size: 20px;
@@ -66,7 +161,20 @@ margin-bottom: 20px;
     padding: 20px;
 
     * {
-    font-weight: 700;
+      font-weight: 700;
     }
-}
+
+    /* Ajuste para telas menores */
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      font-size: 18px;
+      padding: 15px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
 `;
