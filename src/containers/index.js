@@ -1,7 +1,6 @@
 export * from './Cart'
 export * from './Home'
-export { default as Login } from './Login';
-export * from './Menu'
+export { Login } from './Login';
 export * from './Register'
 export * from './Checkout'
 export * from './CompletePayment'
