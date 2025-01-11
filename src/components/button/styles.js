@@ -18,15 +18,23 @@ export const ContainerButton = styled.button`
   }
 
   @media (max-width: 768px) {
+
     font-size: 24px; /* Ajusta o tamanho da fonte para tablets */
     height: 45px; /* Ajusta a altura do botão */
+    display: block; /* Garante que o botão seja tratado como bloco */
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    text-align: center; /* Opcional, para garantir alinhamento do texto */
+    max-width: 300px;
+}
+
+@media (max-width: 480px) {
+
+    font-size: 30px; /* Ajusta o tamanho da fonte para celulares */
+    height: 60px; /* Ajusta a altura do botão */
+    display: block;
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    text-align: center;
   }
 
-  @media (max-width: 480px) {
-    font-size: 30px; /* Reduz ainda mais a fonte em dispositivos móveis */
-    height: 60px; /* Ajusta a altura do botão para celulares */
-    
 
-    
-  }
 `;

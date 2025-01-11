@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -38,6 +39,11 @@ export const Container = styled.div`
     .items {
       grid-area: items;
       padding-left: 20px;
+
+      @media (max-width: 768px) {
+        margin-right: 30px ;
+      }
+
     }
 
     .items-price {
@@ -48,6 +54,10 @@ export const Container = styled.div`
     .delivery-tax {
       grid-area: delivery-tax;
       padding-left: 20px;
+
+      @media (max-width: 768px) {
+        margin-right: 30px ;
+      }
     }
 
     .delivery-tax-price {
@@ -57,6 +67,8 @@ export const Container = styled.div`
 
     /* Ajustes para telas menores */
     @media (max-width: 768px) {
+      justify-content: center;
+      align-items: center; /* Centraliza os itens */
       text-align: center;
       grid-template-areas:
         'title'
@@ -67,6 +79,8 @@ export const Container = styled.div`
     }
 
     @media (max-width: 480px) {
+      justify-content: center;
+      align-items: center; /* Centraliza os itens */
       grid-template-areas:
         'title'
         'items'
@@ -74,8 +88,6 @@ export const Container = styled.div`
         'delivery-tax'
         'delivery-tax-price';
       grid-gap: 8px;
-      text-align: center;
-      margin: 0px 15px 0px 0px;
     }
   }
 
@@ -94,12 +106,16 @@ export const Container = styled.div`
     /* Ajuste para telas menores */
     @media (max-width: 768px) {
       flex-direction: column;
-      align-items: center;
+      justify-content: center;
+      align-items: center; /* Centraliza os itens */
       font-size: 18px;
       padding: 15px;
     }
 
     @media (max-width: 480px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* Centraliza os itens */
       font-size: 16px;
       padding: 10px;
     }

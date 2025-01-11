@@ -18,6 +18,7 @@ export function CartItems() {
                     onClick={clearCart}
                     style={{
                         padding: '10px 20px',
+                        marginRight: '35px',
                         backgroundColor: '#A02644',
                         color: 'white',
                         border: 'none',

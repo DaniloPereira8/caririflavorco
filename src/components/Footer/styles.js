@@ -13,5 +13,9 @@ p {
     font-size: 14px;
     font-weight: lighter;
 }
+
+@media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 

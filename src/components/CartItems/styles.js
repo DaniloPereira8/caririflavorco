@@ -13,8 +13,7 @@ export const ProductImage = styled.img`
   }
 
   @media (max-width: 480px) {
-    height: 0px;
-    width: 0px;
+   display: none;
   }
 `;
 
@@ -41,14 +40,14 @@ export const ButtonGroup = styled.div`
     }
 
     /* Ajuste de tamanho para telas menores */
-    @media (max-width: 768px) {
-      height: 25px;
-      width: 25px;
-    }
-
     @media (max-width: 480px) {
       height: 20px;
       width: 20px;
+    }
+
+    @media (max-width: 768px) {
+      height: 18px;
+      width: 18px;
     }
   }
 `;
@@ -99,4 +98,5 @@ export const TrashImage = styled.img`
     height: 16px;
     width: 16px;
   }
+
 `;

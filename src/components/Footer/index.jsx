@@ -4,7 +4,7 @@ export function Footer() {
 
     return(
         <Container>
-            <p>Desenvolvido por Danilo/DevClub - 2025 - TODOS OS DIREITOS RESERVADOS</p>
+            <p>Danilo - 2025 - ALL RIGHTS RESERVED</p>
         </Container>
     );
 }

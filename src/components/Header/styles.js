@@ -88,10 +88,19 @@ export const Profile = styled.div`
   gap: 12px;
   font-size: 18px;
 
+  @media (max-width: 768px) {
+    margin-bottom: 9px;
+  }
+
   p {
     color: ${(props) => props.theme.white};
     line-height: 90%;
     font-weight: 300;
+
+    @media (max-width: 768px) {
+      line-height: 100%;
+      
+  }
 
     span {
       font-weight: 700;
@@ -134,6 +143,7 @@ export const Logout = styled.button`
 
 export const MainContent = styled.main`
   padding-top: 70px;
+
 `;
 
 export const CartItemCount = styled.span`
@@ -156,9 +166,10 @@ export const MobileMenuButton = styled.button`
   @media (max-width: 768px) {
     display: block;
     position: absolute; /* Coloca o botão em uma posição fixa no layout */
-    top: 33px;          /* Ajusta a distância do topo */
-    left: 20px;         /* Alinha o botão à esquerda */
-    z-index: 1000;      /* Garante que o botão fique acima de outros elementos */
+    top: 30px;          /* Ajusta a distância do topo */
+    left: 10px;         /* Alinha o botão à esquerda */
+    z-index: 1000;     /* Garante que o botão fique acima de outros elementos */
+    padding-right: 1px;
   }
 `;
 

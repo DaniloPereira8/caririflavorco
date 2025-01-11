@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Texture from '../../assets/backgroundcheckout.png'
-import Background from '../../assets/background.svg';
+import Background from '../../assets/background.png';
 
 export const Container = styled.div`
   width: 100%;
