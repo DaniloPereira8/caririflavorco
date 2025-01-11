@@ -64,7 +64,7 @@
 
 import styled from "styled-components";
 import Texture from '../../assets/backgroundcheckout.png'
-import Background from '../../assets/Background.svg';
+import Background from '../../assets/background.svg';
 
 export const Container = styled.div`
   width: 100%;

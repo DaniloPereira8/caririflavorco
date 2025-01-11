@@ -85,7 +85,7 @@
 
 import styled from "styled-components";
 import BannerHamburger from '../../assets/offer.png';
-import Background from '../../assets/Background.svg';
+import Background from '../../assets/background.svg';
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`

@@ -36,7 +36,7 @@
 
 import styled from 'styled-components';
 import BannerHome from '../../assets/home.png';
-import Background from '../../assets/Background.svg';
+import Background from '../../assets/background.svg';
 
 export const Banner = styled.div`
   background: url('${BannerHome}');
