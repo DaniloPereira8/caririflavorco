@@ -4,6 +4,7 @@ export const Container = styled.div`
   .carousel-item {
     padding-right: 40px;
   }
+
   overflow-x: hidden;
 
   .react-multi-carousel-list {
@@ -65,6 +66,6 @@ export const Title = styled.h2`
   /* Responsividade para telas menores que 480px */
   @media (max-width: 480px) {
     font-size: 24px;
-    margin: 30px 0;
+    margin: 30px 0px 55px 0px;
   }
 `;
