@@ -115,7 +115,7 @@
 import { Link as ReactLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import BackgroundRegister from '../../assets/Background.svg';
+import BackgroundRegister from '../../assets/background.svg';
 import Background from '../../assets/background-login-register.png';
 
 export const Container = styled.div`
