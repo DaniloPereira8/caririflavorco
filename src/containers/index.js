@@ -1,6 +1,6 @@
 export * from './Cart'
 export * from './Home'
-export * from './Login/index';
+export * from './Login/index.jsx';
 export * from './Menu'
 export * from './Register'
 export * from './Checkout'
