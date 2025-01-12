@@ -101,6 +101,15 @@
   transform: translateY(1px);
 }
 
+#retry-button {
+  text-decoration: none;
+  color: #0044b3;
+}
+
+#view-details {
+  text-decoration: none;
+}
+
 /* Página de status do pagamento */
 #payment-status {
   display: flex;
@@ -112,6 +121,7 @@
   max-width: 600px;
   min-height: 380px;
   align-self: center;
+  text-align: center;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
   border-radius: 16px;
   padding: 40px;
@@ -120,6 +130,32 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+
+.center-container {
+  display: flex; /* Usa o Flexbox para centralizar */
+  flex-direction: column; /* Alinha os elementos verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  height: 100%; /* Certifique-se de definir a altura para centralizar verticalmente */
+  text-align: center; /* Centraliza o texto */
+}
+
+#intent-status {
+  font-weight: bold;
+  font-size: 13px;
+  color: rgb(22, 183, 22);
+  margin-bottom: 8px; /* Espaçamento entre os elementos */
+}
+
+#intent-id {
+  font-size: 12px;
+  margin-bottom: 8px; /* Espaçamento entre os elementos */
+}
+
+.TableLabel {
+  font-weight: bold;
+}
+
 
 /* Animação de suavização */
 @keyframes fadeInForm {
